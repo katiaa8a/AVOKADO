@@ -4,118 +4,213 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aguacate Fresh</title>
+
 <style>
-body{margin:0;font-family:sans-serif;background:#f7f7f7;color:#333}
-header{position:fixed;width:100%;top:0;background:white;box-shadow:0 2px 10px rgba(0,0,0,0.1);display:flex;justify-content:space-between;align-items:center;padding:10px 20px;z-index:1000}
-nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:bold}
-section{padding:80px 20px}
-.hero{background:url('https://images.unsplash.com/photo-1589927986089-35812388d1f4') center/cover no-repeat;color:white;text-align:center;padding:120px 20px}
-.hero h1{font-size:40px}
-.btn{background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:20px;cursor:pointer}
-.card{background:white;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);padding:20px;margin:10px}
-.flex{display:flex;flex-wrap:wrap;justify-content:center}
-.accordion{cursor:pointer;padding:15px;border:none;outline:none;width:100%;text-align:left;background:#eee;margin:5px 0;border-radius:10px}
-.panel{display:none;padding:10px;background:white}
-form input,form select,form textarea{width:100%;padding:10px;margin:5px 0;border-radius:10px;border:1px solid #ccc}
-.success{color:green;margin-top:10px;display:none}
-footer{text-align:center;padding:20px;background:#eee}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5fff5;
+}
+
+/* HEADER */
+header {
+  background: #2e7d32;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1607301406259-dfb186e15de8');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+/* PRODUCTOS */
+.products {
+  padding: 40px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2e7d32;
+}
+
+/* GUACAMOLE ESPECIAL */
+#guacamole {
+  background-image: url('https://img.freepik.com/fotos-premium/aguacate-sobre-fondo-madera-vista-superior-espacio-libre-su-texto_187166-24502.jpg');
+  background-size: cover;
+  padding: 50px;
+}
+
+.guac-box {
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+/* NOSOTROS */
+.about {
+  padding: 40px;
+  text-align: center;
+}
+
+/* CONTACTO */
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<h2>🥑 Aguacate Fresh</h2>
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#productos">Productos</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#contacto">Contacto</a>
-</nav>
+  <h1>Aguacate Fresh</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
-<section class="hero" id="inicio">
-<h1>Frescura natural en cada bocado</h1>
-<p>Productos de aguacate listos para disfrutar</p>
-<button class="btn">Comprar ahora</button>
+<section class="hero">
+  <h1>Frescura en cada bocado 🥑</h1>
+  <p>Productos naturales de aguacate</p>
 </section>
 
-<section id="nosotros">
-<h2>Nosotros</h2>
-<div class="card">
-<p><strong>¿Quiénes somos?</strong><br>Empresa dedicada a productos de aguacate al vacío.</p>
-<p><strong>Misión:</strong> Brindar productos naturales y saludables.</p>
-<p><strong>Visión:</strong> Ser una marca reconocida.</p>
-<p><strong>Valores:</strong> Calidad, Frescura, Honestidad, Compromiso, Sustentabilidad</p>
-</div>
+<section id="productos" class="products">
+  <h2>Productos</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f">
+      <h3>Dips</h3>
+      <p>Deliciosos dips naturales</p>
+      <button onclick="comprar('Dips')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605478580701-1f8c3c6c5eae">
+      <h3>Pulpa</h3>
+      <p>Pulpa lista para usar</p>
+      <button onclick="comprar('Pulpa')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1592928308033-55d4d6d08f48">
+      <h3>Chips</h3>
+      <p>Snacks saludables</p>
+      <button onclick="comprar('Chips')">Comprar</button>
+    </div>
+
+  </div>
 </section>
 
-<section id="productos">
-<h2>Productos</h2>
-<button class="accordion">🥑 Guacamole</button>
-<div class="panel">Producto listo para consumir.</div>
-<button class="accordion">🥣 Dips</button>
-<div class="panel">Variedad de sabores.</div>
-<button class="accordion">🧃 Pulpa</button>
-<div class="panel">Perfecta para recetas.</div>
-<button class="accordion">🥑 Rebanadas</button>
-<div class="panel">Listas para ensaladas.</div>
-<button class="accordion">🍟 Chips</button>
-<div class="panel">Snack saludable.</div>
+<section id="guacamole">
+  <div class="guac-box">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFhUXGB8aGBgXGBgeGxsYGBoXGBgeGh0YHSggGh0lHRoXITEjJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGxAQGy0mICYtMC0yLy0tLS0vLS8tLy0vLS0tLy0tLy0tLS0tLS0tLS0tLS0tLS0tLy0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xAA/...">
+    <h2>Guacamole</h2>
+    <p>Hecho con aguacates frescos</p>
+    <button onclick="comprar('Guacamole')">Comprar</button>
+  </div>
 </section>
 
-<section>
-<h2>Beneficios</h2>
-<div class="flex">
-<div class="card">100% natural</div>
-<div class="card">Sin conservadores</div>
-<div class="card">Empacado al vacío</div>
-<div class="card">Listo para consumir</div>
-<div class="card">Rico en nutrientes</div>
-</div>
+<section id="nosotros" class="about">
+  <h2>Nosotros</h2>
+  <p>Somos un negocio dedicado a ofrecer productos naturales de aguacate con la mejor calidad.</p>
 </section>
 
-<section id="contacto">
-<h2>Pedido</h2>
-<div class="card">
-<form id="form">
-<input type="text" placeholder="Nombre" required>
-<input type="tel" placeholder="Teléfono" required>
-<input type="email" placeholder="Correo" required>
-<select required>
-<option>Guacamole</option>
-<option>Dips</option>
-<option>Pulpa</option>
-<option>Rebanadas</option>
-<option>Chips</option>
-</select>
-<input type="number" placeholder="Cantidad" required>
-<input type="date" required>
-<textarea placeholder="Comentarios"></textarea>
-<button class="btn" type="submit">Enviar</button>
-<div class="success" id="successMsg">✔ Gracias, tu pedido ha sido enviado.<br>⏳ Procesando solicitud...<br>📞 Te contactaremos pronto.</div>
-</form>
-</div>
+<section id="contacto" class="contact">
+  <h2>Contacto</h2>
+  <input type="text" placeholder="Nombre"><br>
+  <input type="email" placeholder="Email"><br>
+  <textarea placeholder="Mensaje"></textarea><br>
+  <button onclick="enviar()">Enviar</button>
 </section>
 
 <footer>
-<p>© 2026 Aguacate Fresh</p>
+  <p>© 2026 Aguacate Fresh</p>
 </footer>
 
 <script>
-document.querySelectorAll('.accordion').forEach(btn=>{
-btn.addEventListener('click',()=>{
-let panel=btn.nextElementSibling;
-panel.style.display=panel.style.display==='block'?'none':'block';
-});
-});
+function comprar(producto) {
+  alert("Agregaste " + producto + " al carrito 🛒");
+}
 
-document.getElementById('form').addEventListener('submit',function(e){
-e.preventDefault();
-let msg=document.getElementById('successMsg');
-msg.style.display='block';
-window.scrollTo({top:0,behavior:'smooth'});
-this.reset();
-setTimeout(()=>{msg.style.display='none'},5000);
-});
+function enviar() {
+  alert("Mensaje enviado 📩");
+}
 </script>
 
 </body>
